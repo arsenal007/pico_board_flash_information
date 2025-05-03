@@ -1,0 +1,77 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cmake pico2 (RP2350)",
+            "type": "process",
+            "isBuildCommand": true,
+            "command": "cmake",
+            "args": [
+                "-DPICO_BOARD=pico2",
+                "-G",
+                "Ninja",
+                "-B${workspaceFolder}/build",
+                "-S${workspaceFolder}",
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "cmake pico (RP2040)",
+            "type": "process",
+            "isBuildCommand": true,
+            "command": "cmake",
+            "args": [
+                "-DPICO_BOARD=pico",
+                "-G",
+                "Ninja",
+                "-B${workspaceFolder}/build",
+                "-S${workspaceFolder}",
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "build",
+            "type": "process",
+            "isBuildCommand": true,
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "clean",
+            "type": "process",
+            "isBuildCommand": true,
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--target",
+                "clean"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
