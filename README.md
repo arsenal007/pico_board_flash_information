@@ -68,8 +68,10 @@ This project is a simple application for the Raspberry Pi Pico that reads and di
 3. The terminal will display the JEDEC ID and flash size information, similar to the following:
 
     ```
-    JEDEC ID: 0xEF 0x40 0x18
-    Flash size: 2^24 = 16777216 bytes (16.00 MB)
+    JEDEC ID: 0x85 0x60 0x15
+    Manufacturer: Puya
+    Device: P25Q16H (2 MB)
+    Flash size: 2^21 = 2097152 bytes (2.00 MB)
     ```
 
 ## License
