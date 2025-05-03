@@ -1,4 +1,4 @@
-# SPI Flash Info
+# PICO PI(RP2040) and PICO PI 2 (RP2350) SPI Flash Info
 
 This project is a simple application for the Raspberry Pi Pico that reads and displays the JEDEC ID and size of the connected SPI flash memory. It uses the Pico SDK to interact with the hardware and provides output via UART.
 
@@ -22,7 +22,7 @@ This project is a simple application for the Raspberry Pi Pico that reads and di
 ├── CMakeLists.txt
 ├── pico_sdk_import.cmake
 ├── README.md
-├── spi_flash.c
+├── pico_pi_spi_flash_info.c
 ├── .vscode/
 │   ├── tasks.json
 ├── build/
