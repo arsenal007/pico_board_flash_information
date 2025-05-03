@@ -17,32 +17,6 @@ This project is a simple application for the Raspberry Pi Pico that reads and di
 
 ## Project Structure
 
-## How to Build
-
-1. Clone the repository and navigate to the project directory.
-
-Collecting workspace informationFiltering to most relevant informationHere is a suggested README.md for your project:
-
-```markdown
-# SPI Flash Info
-
-This project is a simple application for the Raspberry Pi Pico that reads and displays the JEDEC ID and size of the connected SPI flash memory. It uses the Pico SDK to interact with the hardware and provides output via UART.
-
-## Features
-
-- Reads the JEDEC ID of the SPI flash memory.
-- Calculates and displays the flash memory size based on the JEDEC ID.
-- Outputs the information via UART.
-
-## Prerequisites
-
-- Raspberry Pi Pico or compatible hardware.
-- Pico SDK installed and initialized.
-- CMake build system.
-- A UART terminal to view the output.
-
-## Project Structure
-
 ```
 ├── .gitignore
 ├── CMakeLists.txt
@@ -69,21 +43,21 @@ This project is a simple application for the Raspberry Pi Pico that reads and di
 
 1. Clone the repository and navigate to the project directory.
 2. Initialize the Pico SDK if not already done:
-   ```sh
-   git submodule update --init
-   ```
+    ```sh
+    git submodule update --init
+    ```
 3. Create a `build` directory and navigate into it:
-   ```sh
-   mkdir build && cd build
-   ```
+    ```sh
+    mkdir build && cd build
+    ```
 4. Run CMake to configure the project:
-   ```sh
-   cmake ..
-   ```
+    ```sh
+    cmake ..
+    ```
 5. Build the project:
-   ```sh
-   make
-   ```
+    ```sh
+    make
+    ```
 
 ## How to Flash
 
@@ -96,10 +70,10 @@ This project is a simple application for the Raspberry Pi Pico that reads and di
 2. Reset the Pico to start the program.
 3. The terminal will display the JEDEC ID and flash size information, similar to the following:
 
-   ```
-   JEDEC ID: 0xEF 0x40 0x18
-   Flash size: 2^24 = 16777216 bytes (16.00 MB)
-   ```
+    ```
+    JEDEC ID: 0xEF 0x40 0x18
+    Flash size: 2^24 = 16777216 bytes (16.00 MB)
+    ```
 
 ## License
 
