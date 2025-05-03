@@ -24,45 +24,42 @@ This project is a simple application for the Raspberry Pi Pico that reads and di
 ├── README.md
 ├── spi_flash.c
 ├── .vscode/
-│   ├── c_cpp_properties.json
-│   ├── cmake-kits.json
-│   ├── extensions.json
-│   ├── launch.json
-│   ├── settings.json
 │   ├── tasks.json
 ├── build/
 │   ├── build.ninja
 │   ├── CMakeCache.txt
 │   ├── compile_commands.json
-│   ├── spi_flash_info.elf
-│   ├── spi_flash_info.uf2
+│   ├── pico_pi_spi_flash_info.elf
+│   ├── pico_pi_spi_flash_info.uf2
 │   └── ...
 ```
 
 ## How to Build
 
 1. Clone the repository and navigate to the project directory.
-2. Initialize the Pico SDK if not already done:
     ```sh
-    git submodule update --init
+    git clone git@github.com:arsenal007/pico_board_flash_information.git
+3. Create a `build` directory:
+    ```sh
+    mkdir build 
     ```
-3. Create a `build` directory and navigate into it:
+4. Run CMake to configure the project for the Raspberry Pi Pico 2 ( based on RP2350 ):
     ```sh
-    mkdir build && cd build
+    cmake -DPICO_BOARD=pico2 -G Ninja -B${PWD}/build -S${PWD}
     ```
-4. Run CMake to configure the project:
+    Or for the Raspberry Pi Pico (based on RP2040):
     ```sh
-    cmake ..
+    cmake -DPICO_BOARD=pico -G Ninja -B${PWD}/build -S${PWD}
     ```
 5. Build the project:
     ```sh
-    make
+    cmake --build ${PWD}/build
     ```
 
 ## How to Flash
 
 1. Connect the Raspberry Pi Pico to your computer while holding the BOOTSEL button.
-2. Copy the generated `.uf2` file (e.g., `spi_flash_info.uf2`) from the `build` directory to the Pico's USB mass storage device.
+2. Copy the generated `.uf2` file (e.g., `pico_pi_spi_flash_info.uf2`) from the `build` directory to the Pico's USB mass storage device.
 
 ## How to Run
 

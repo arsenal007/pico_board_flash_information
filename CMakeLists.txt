@@ -27,7 +27,7 @@ endif()
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(spi_flash_info C CXX ASM)
+project(pico_pi_spi_flash_info C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
@@ -38,7 +38,7 @@ if(TARGET tinyusb_device)
     add_executable(${CMAKE_PROJECT_NAME})
 
     target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-        ${CMAKE_SOURCE_DIR}/spi_flash.c
+        ${CMAKE_SOURCE_DIR}/pico_pi_spi_flash_info.c
     )
 
     # pull in common dependencies
